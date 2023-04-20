@@ -1,11 +1,9 @@
 import express from "express";
-import { GetAllUser, signUp, Login } from "../controllers/user-controller";
+import { GetAllUser } from "../controllers/user-controllers";
 
-const router=express.Router();
+const userRouter=express.Router();
 
-router.get("/GetAllUser",GetAllUser);
-router.post("/signUp",signUp);
-router.post("/Login",Login);
+userRouter.get("/GetAllUser",GetAllUser);
 
 
-export default router;
+export default userRouter;

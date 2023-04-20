@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const Schema= mongoose.Schema;
 
 const userSchema = new Schema({
-    name:{
+    username:{
         type: String,
         required: true
     },
@@ -16,8 +16,14 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 8
-    }
-})
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
+    },
+},
+{timestamps:true}
+);
 
 export default mongoose.model("User",userSchema);
 

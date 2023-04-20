@@ -1,4 +1,4 @@
-import Blog from "../model/blog";
+import Blog from "../model/product";
 
 
 export const GetAllBlogs= async (req, res, next )=>{
